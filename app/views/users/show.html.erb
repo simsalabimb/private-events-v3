@@ -1,6 +1,13 @@
 <h1>CHECK OUT ALL YOUR EVENTS BELOW</h1>
+<br>
 
-<% @user.each do |user| %>
-  <%= user.username %>
+<h3>Logged In: <%= current_user.username %> </h3>
+
+<% current_user.events.each do |event| %>
+    <p><strong>EVENT: </strong></p>
+    <b>title:</b> <%= event.title %><br>
+    <b>event:</b>  <%= event.description %><br>
+    <b>date:</b>  <%= event.date %><br>
+
 <% end %>
 
