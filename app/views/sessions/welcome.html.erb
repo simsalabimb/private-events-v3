@@ -3,6 +3,7 @@
 <% if logged_in? %>
   <h1>You are logged in <%= current_user.username %></h1>
 
+  <p>Event 1: <%= current_user.events.last.title %> </p>
 <% else %>
   <%= button_to "Login", '/login', method: :get%>
   <%= button_to "Sign Up", '/users/new', method: :get %>
